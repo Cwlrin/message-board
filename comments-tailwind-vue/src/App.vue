@@ -1,5 +1,7 @@
-<template><h1>Hello</h1></template>
+<template><CommentsApp/></template>
 
-<script setup></script>
+<script setup>
+import CommentsApp from "./CommentsApp.vue";
+</script>
 
 <style></style>

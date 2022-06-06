@@ -7,80 +7,10 @@
     <title>Vite TailWind 留言板</title>
 </head>
 <body>
-<div id="app"></div>
-<main class="p-4 bg-gray-50 min-h-screen">
-    <div class="max-w-screen-xl mx-auto bg-white p-8 rounded-lg shadow-2xl">
-        <h2 class="text-3xl my-6">评论</h2>
-        <form action="" class="grid">
-            <textarea class="bg-gray-50 p-2 rounded" id="" name="comment" placeholder="请输入你的评论"></textarea>
-            <fieldset class="py-4">
-                <input class="px-4 py-1 bg-blue-600 rounded text-white" type="submit" value="评论"/>
-                <input class="px-4 py-1 bg-white rounded border ml-3" type="reset" value="取消"/>
-            </fieldset>
-        </form>
-        <div class="border-b border-gray-300 my-2 mb-4"></div>
-        <div>
-            <div class="flex">
-                <!-- 即使在 public 文件夹下，也需要使用 / 绝对路径引用它下面的文件，省略 Public -->
-                <img alt="" class="w-12 h-12 mr-4 rounded-full" src="/images/嘉然今天吃什么.jpg"/>
-                <div>
-                    <p>嘉然今天吃什么</p>
-                    <p class="text-gray-600 text-sm">2022-04-28 17:00</p>
-                </div>
-                <!-- 菜单考右对齐 -->
-                <span class="ml-auto">
-                <svg class="h-5 w-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20"
-                     xmlns="http://www.w3.org/2000/svg">
-                 <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"/>
-                </svg>
-                </span>
-            </div>
-            <p class="text-gray-600 py-4">
-                找到了一个超好吃的芋泥代餐 <br>
-                复活(ー`´ー)
-            </p>
-        </div>
-        <div class="pl-8 border-l-2 border-gray-200">
-            <!-- 回复 -->
-            <div class="flex">
-                <!-- 即使在 public 文件夹下，也需要使用 / 绝对路径引用它下面的文件，省略 Public -->
-                <img alt="" class="w-12 h-12 mr-4 rounded-full" src="/images/珈乐Caral.jpg"/>
-                <div>
-                    <p>珈乐Carol</p>
-                    <p class="text-gray-600 text-sm">2022-04-28 18:15</p>
-                </div>
+<div id="app">
 
-                <span class="ml-auto">
-                    <svg class="h-5 w-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"/>
-                    </svg>
-                </span>
-            </div>
-            <p class="text-gray-600 py-4">我推的！哈哈饭前饭后都好吃！</p>
-            <div class="flex">
-                <!-- 即使在 public 文件夹下，也需要使用 / 绝对路径引用它下面的文件，省略 Public -->
-                <img alt="" class="w-12 h-12 mr-4 rounded-full" src="/images/嘉心糖3.0.jpg"/>
-                <div>
-                    <p>奶味嘉心糖</p>
-                    <p class="text-gray-600 text-sm">2022-04-28 17:00</p>
-                </div>
+</div>
 
-                <span class="ml-auto">
-                    <svg class="h-5 w-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"/>
-                    </svg>
-                </span>
-            </div>
-            <p class="text-gray-600 py-4">
-                代餐是吧
-            </p>
-        </div>
-        <button class="pt-4 pb-10 text-blue-600">回复</button>
-    </div>
-
-</main>
 <script src="src/main.js" type="module"></script>
 </body>
 </html>
