@@ -10,12 +10,13 @@
         <!-- 单个留言 -->
         <CommentItem :avatar="comment.avatar" :content="comment.content" :time="comment.time" :user="comment.user"/>
         <!-- 回复列表 -->
-        <ReplyBox v-if="comment.replies">
+        <ReplyContainer v-if="comment.replies">
           <!-- 回复 -->
           <CommentItem v-for="reply in comment.replies" :key="reply.id" :avatar="reply.avatar" :content="reply.content"
                        :time="reply.time"
                        :user="reply.user"/>
-        </ReplyBox>
+        </ReplyContainer>
+        <ReplyBox @submit="addReply($event, comment.id)"/>
       </div>
     </div>
   </main>
@@ -26,6 +27,7 @@ import CommentBox from "./components/CommentBox.vue";
 import DividerHorizontal from "./components/DividerHorizontal.vue";
 import CommentItem from "./components/CommentItem.vue";
 import ReplyBox from "./components/ReplyBox.vue";
+import ReplyContainer from "./components/ReplyContainer.vue";
 
 import face1 from "./assets/嘉然今天吃什么.jpg";
 import face2 from "./assets/珈乐Caral.jpg";
@@ -98,6 +100,16 @@ const constructNewComment = (content) => {
 const addNewComment = (content) => {
   const newComment = constructNewComment(content);
   comments.value.push(newComment);
+};
+
+const addReply = (content, id) => {
+  const reply = constructNewComment(content);
+  let comment = comments.value.find((comment) => comment.id === id);
+  if (comment.replies) {
+    comment.replies.push(reply);
+  } else {
+    comment.replies = [reply];
+  }
 };
 </script>
 
